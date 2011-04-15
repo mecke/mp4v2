@@ -593,7 +593,7 @@ Tags::store( MP4File& file, const string& code, MP4ItmfBasicType basicType, cons
     MP4ItmfItem& item = *genericItemAlloc( code, 1 ); // alloc
     MP4ItmfData& data = item.dataList.elements[0];
 
-    data.typeCode = MP4_ITMF_BT_UTF8;
+    data.typeCode = basicType;
     data.valueSize = size;
     data.value = (uint8_t*)malloc( data.valueSize );
     memcpy( data.value, buffer, data.valueSize );
@@ -647,7 +647,7 @@ void
 Tags::storeTrack( MP4File& file, const MP4TagTrack& cpp, const MP4TagTrack* c )
 {
     if( c ) {
-        uint8_t buf[7];
+        uint8_t buf[8]; // iTMF spec says 7 but iTunes media is 8
         memset( buf, 0, sizeof(buf) );
 
         buf[2] = uint8_t((cpp.index & 0xff00) >> 8);

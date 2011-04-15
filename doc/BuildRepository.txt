@@ -1,5 +1,5 @@
-MP4v2 1.9.1 Building the Repository
-***********************************
+MP4v2 trunk-r355 Building the Repository
+****************************************
 
 Table of Contents
 *****************
@@ -72,9 +72,9 @@ source-distribution bundle then this document is not for you.
 
 This chapter is for the impatient or those just looking for a quick
 summary of all the commands used in a typical build. You may skip this
-summary and jump to *note Build Process::.
+summary and jump to *Note Build Process::.
 
-     svn checkout https://mp4v2.googlecode.com/svn/releases/1.9.1 mp4v2
+     svn checkout https://mp4v2.googlecode.com/svn/trunk mp4v2
      cd mp4v2
      autoreconf -fiv
      rm -fr build/
@@ -102,7 +102,7 @@ distribution which contains this document.
 If you are a project member, then you may add the appropriate
 login/password information as needed.
 
-     svn checkout https://mp4v2.googlecode.com/svn/releases/1.9.1 mp4v2
+     svn checkout https://mp4v2.googlecode.com/svn/trunk mp4v2
      cd mp4v2
 
 It is recommended to use Subversion 1.5.0 or higher.  Lower versions
@@ -253,7 +253,7 @@ to the host system:
    * Doxygen 1.5.7 or higher (lower versions should work)
 
 Documentation that is shipped with source-distribution is generated as
-part of the *note Build Process:: step. This section documents builds
+part of the *Note Build Process:: step. This section documents builds
 all of the supported methods to build documentation. There are three
 kinds of documentation in this project; man-pages, articles and API.
 Documentation must be build from the repository.
@@ -286,7 +286,7 @@ If you need examples of how to document C-compatible source see
 `libplatform/io/File.h' .
 
 The following table describes the various make targets available for
-building docs. Note you must first have completed the *note Configure::
+building docs. Note you must first have completed the *Note Configure::
 step.
 
 `make man'

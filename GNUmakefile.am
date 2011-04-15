@@ -6,7 +6,9 @@ check_PROGRAMS =
 
 ###############################################################################
 
-libmp4v2_la_LDFLAGS = -version-number $(PROJECT_version_major):$(PROJECT_version_minor):$(PROJECT_version_point) $(X_libmp4v2_la_LDFLAGS)
+libmp4v2_la_LDFLAGS = \
+    $(AM_LDFLAGS) \
+    -version-number $(PROJECT_version_major):$(PROJECT_version_minor):$(PROJECT_version_point) $(X_libmp4v2_la_LDFLAGS)
 
 libmp4v2_la_SOURCES = \
     src/3gp.cpp                          \
@@ -89,7 +91,6 @@ libmp4v2_la_SOURCES = \
     src/mp4file.h                        \
     src/mp4file_io.cpp                   \
     src/mp4info.cpp                      \
-    src/mp4meta.cpp                      \
     src/mp4property.cpp                  \
     src/mp4property.h                    \
     src/mp4track.cpp                     \
@@ -245,7 +246,6 @@ mp4v2inc_HEADERS = \
     include/mp4v2/isma.h                        \
     include/mp4v2/itmf_generic.h                \
     include/mp4v2/itmf_tags.h                   \
-    include/mp4v2/meta.h                        \
     include/mp4v2/mp4v2.h                       \
     include/mp4v2/platform.h                    \
     include/mp4v2/sample.h                      \

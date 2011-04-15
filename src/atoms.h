@@ -501,6 +501,19 @@ public:
 
 ///////////////////////////////////////////////////////////////////////////////
 
+/// iTMF hdlr-atom.
+class MP4ItmfHdlrAtom : public MP4FullAtom
+{
+public:
+    MP4ItmfHdlrAtom();
+    void Read();
+
+    MP4Integer32Property& reserved1;
+    MP4BytesProperty&     handlerType;
+    MP4BytesProperty&     reserved2;
+    MP4BytesProperty&     name;
+};
+
 /// iTMF item-atom.
 class MP4ItemAtom : public MP4Atom
 {
@@ -515,7 +528,7 @@ public:
     MP4MeanAtom();
     void Read();
 
-    MP4StringProperty& value;
+    MP4BytesProperty& value;
 };
 
 /// iTMF name-atom.
@@ -525,7 +538,7 @@ public:
     MP4NameAtom();
     void Read();
 
-    MP4StringProperty& value;
+    MP4BytesProperty& value;
 };
 
 /// iTMF data-atom.

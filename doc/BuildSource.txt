@@ -1,5 +1,5 @@
-MP4v2 1.9.1 Building the Source
-*******************************
+MP4v2 trunk-r355 Building the Source
+************************************
 
 Table of Contents
 *****************
@@ -68,10 +68,10 @@ building from the repository then this document is not for you.
 
 This chapter is for the impatient or those just looking for a quick
 summary of all the commands used in a typical build. You may skip this
-summary and jump to *note Build Process::.
+summary and jump to *Note Build Process::.
 
-     tar xf mp4v2-1.9.1.tar.bz2
-     cd mp4v2-1.9.1/
+     tar xf mp4v2-trunk-r355.tar.bz2
+     cd mp4v2-trunk-r355/
      rm -fr build/
      mkdir build/
      cd build/
@@ -90,23 +90,23 @@ Extract sources from a source-distribution bundle. Releases are
 available from `http://code.google.com/p/mp4v2' in the downloads
 (http://code.google.com/p/mp4v2/downloads/list) section.
 
-     tar xf mp4v2-1.9.1.tar.bz2
-     cd mp4v2-1.9.1/
+     tar xf mp4v2-trunk-r355.tar.bz2
+     cd mp4v2-trunk-r355/
 
 Older versions of `tar' may not automatically uncompress the bundle, so
 you might have to either enter additional flags manually, or first
 decompress the bundle before extracting. Some possible command
 variations for uncompressing a `bz2' file:
 
-     tar xjf mp4v2-1.9.1.tar.bz2
-     bunzip2 -c mp4v2-1.9.1.tar.bz2 | tar xf -
-     bzcat mp4v2-1.9.1.tar.bz2 | tar xf -
+     tar xjf mp4v2-trunk-r355.tar.bz2
+     bunzip2 -c mp4v2-trunk-r355.tar.bz2 | tar xf -
+     bzcat mp4v2-trunk-r355.tar.bz2 | tar xf -
 
 And for a `gz' file:
 
-     tar xzf mp4v2-1.9.1.tar.gz
-     gunzip -c mp4v2-1.9.1.tar.gz | tar xf -
-     gzcat mp4v2-1.9.1.tar.gz | tar xf -
+     tar xzf mp4v2-trunk-r355.tar.gz
+     gunzip -c mp4v2-trunk-r355.tar.gz | tar xf -
+     gzcat mp4v2-trunk-r355.tar.gz | tar xf -
 
 4.2 Configure
 =============

@@ -1,5 +1,5 @@
-MP4v2 1.9.1 Authors
-*******************
+MP4v2 trunk-r355 Authors
+************************
 
 This document lists significant contributors to MP4v2. If any
 contributors are missing please contact one of the project members.

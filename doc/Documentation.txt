@@ -1,5 +1,10 @@
-MP4v2 1.9.1 Documentation
-*************************
+MP4v2 trunk-r355 Documentation
+******************************
+
+     Warning: This is a developer release which includes all the normal
+     pieces of a stable release but is considered unstable.  The
+     purpose of a developer release is to make available to MP4v2
+     developers features which require collaborative testing.
 
 Introduction
 ============
