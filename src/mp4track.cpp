@@ -538,6 +538,10 @@ void MP4Track::FinishWrite()
         pBufferSizeProperty->SetValue(GetMaxSampleSize());
     }
 
+//aacgain patch
+//retain original bitrates which are round numbers
+//don't use the values computed below, which are fractional
+#if 0 
     MP4Integer32Property* pBitrateProperty;
 
     if (m_pTrakAtom->FindProperty(
@@ -551,6 +555,8 @@ void MP4Track::FinishWrite()
                 (MP4Property**)&pBitrateProperty)) {
         pBitrateProperty->SetValue(GetAvgBitrate());
     }
+#endif
+//end aacgain patch
 }
 
 // Process sdtp log and add sdtp atom.
@@ -898,7 +904,11 @@ File* MP4Track::GetSampleFile( MP4SampleId sampleId )
 
     File* file;
 
-    if( pUrlAtom->GetFlags() & 1 ) {
+    //patch from r390:
+    // make sure this is actually a url atom (somtimes it's "cios", like in iTunes videos) 
+    if( strcmp(pUrlAtom->GetType(), "url ") || 
+        pUrlAtom->GetFlags() & 1 ) {
+    //end patch from r390
         file = NULL; // self-contained
     }
     else {
